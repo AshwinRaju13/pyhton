@@ -1,0 +1,32 @@
+# this program is to find the age of the person.
+current_yr= 2017
+def birth_yr(year):
+
+    yr_birth= current_yr - year
+    return (yr_birth)
+
+while True:
+
+    inpt = input('enter your name->\t')
+    year = input(" enter year->\t")
+    name = ''.join(inpt)
+    if len(year)== 0:
+        print(' give valid info')
+        continue
+    try:
+        year = int(year)
+    except ValueError:
+        print('print properly')
+
+    if year < current_yr:
+        yr = birth_yr(year)
+
+        print("Hi %s you born on %s" % (name, yr))
+
+    elif year == current_yr:
+
+        print('%s you have born this year' % (name))
+
+    else:
+        pass
+
